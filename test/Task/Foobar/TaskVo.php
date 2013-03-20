@@ -1,11 +1,12 @@
 <?php
 
-  namespace Task\Foobar;
+    namespace Task\Foobar;
 
-  class TaskVo extends \Simplon\Task\AbstractTaskVo
-  {
-    public function getId()
+    use Simplon\Task\TaskVoInterface;
+
+    class TaskVo implements TaskVoInterface
     {
-      return $this->getByKey('id');
+        public function __construct(array $data)
+        {
+        }
     }
-  }

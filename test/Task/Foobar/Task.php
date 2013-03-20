@@ -1,11 +1,13 @@
 <?php
 
-  namespace Task\Foobar;
+    namespace Task\Foobar;
 
-  class Task
-  {
-    public function run(\Simplon\Task\AbstractTaskVo $taskVo)
+    use Simplon\Task\TaskAbstract;
+
+    class Task extends TaskAbstract
     {
-      var_dump($taskVo);
+        public function run()
+        {
+            var_dump($this->getVo());
+        }
     }
-  }
