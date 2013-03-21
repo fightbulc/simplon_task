@@ -16,7 +16,7 @@
 
   "minimum-stability": "dev",
 
-  "bin": ["bin/taskr.php"],
+  "bin": ["bin/taskr"],
 
   "require": {
     "php": ">=5.4",
