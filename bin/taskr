@@ -7,8 +7,7 @@
 
     system('clear');
 
-    $composer = require __DIR__ . '/../vendor/autoload.php';
-    $composer->add('Task', __DIR__ . '/');
+    $composer = require __DIR__ . '/../../../autoload.php';
 
     // ##############################################
 

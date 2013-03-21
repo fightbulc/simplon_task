@@ -1,9 +1,15 @@
 {
   "config": {
-    "bin-dir": "bin"
+    "bin-dir": "bin/"
   },
 
   "require": {
     "simplon/task": "dev-master"
+  },
+
+  "autoload": {
+    "psr-0": {
+      "Task": "./"
+    }
   }
 }
