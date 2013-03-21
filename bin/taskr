@@ -40,11 +40,18 @@
     /** @var $classInstance TaskAbstract */
     $classInstance = new $classInstanceName();
 
-    // taskVo class instance name
-    $classVoInstanceName = 'Task\\' . $className . '\TaskVo';
+    // handle parameter via VO
+    if(! empty($runVariables))
+    {
+      // taskVo class instance name
+      $classVoInstanceName = 'Task\\' . $className . '\TaskVo';
 
-    /** @var $classVoInstance TaskVoInterface */
-    $classVoInstance = new $classVoInstanceName($runVariables);
+      /** @var $classVoInstance TaskVoInterface */
+      $classVoInstance = new $classVoInstanceName($runVariables);
+
+      // set VO
+      $classInstance->setVo($classVoInstance);
+    }
 
     // ##############################################
 
@@ -54,9 +61,7 @@
     echo "Response:\n\n";
 
     // run task call
-    $classInstance
-        ->setVo($classVoInstance)
-        ->run();
+    $classInstance->run();
 
     echo "\n";
     echo "#########################################\n\n";
