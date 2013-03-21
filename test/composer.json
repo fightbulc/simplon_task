@@ -1,4 +1,8 @@
 {
+  "config": {
+    "bin-dir": "bin"
+  },
+
   "require": {
     "simplon/task": "dev-master"
   }
