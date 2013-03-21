@@ -2,7 +2,7 @@
   "name": "simplon/task",
   "description": "Create and run console tasks.",
   "homepage": "https://github.com/fightbulc/simplon_task",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "type": "library",
   "keywords": ["console", "tasks"],
   "license": "MIT",

@@ -55,13 +55,23 @@
 
     // ##############################################
 
-    echo "#########################################\n\n";
-    echo "Task: $className\n";
-    echo "Parameters: " . join(', ', $parameters) . "\n";
-    echo "Response:\n\n";
+    $parameters = join(', ', $parameters);
+
+    if(empty($parameters))
+    {
+      $parameters = 'NULL';
+    }
+
+    echo "---------------------------------------\n\n";
+    echo "Task: " . Simplon\Task\TaskColor::cyan($className) . "\n";
+    echo "Parameters: " . Simplon\Task\TaskColor::cyan($parameters) . "\n\n";
+    echo "---------------------------------------\n\n";
 
     // run task call
     $classInstance->run();
 
+    // extra line
     echo "\n";
-    echo "#########################################\n\n";
+
+    // bell
+    Simplon\Task\TaskColor::bell();

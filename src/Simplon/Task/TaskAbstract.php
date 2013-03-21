@@ -68,7 +68,7 @@
          */
         public function writeNote($text)
         {
-            $this->_writeLine($text, 'darkGrey', 'lightGrey');
+            $this->_writeLine($text, 'black', 'yellow');
         }
 
         // ######################################
@@ -88,7 +88,7 @@
          */
         public function writeSubtle($text)
         {
-            $this->_writeLine($text, 'darkGrey', 'black');
+            $this->_writeLine($text, 'darkGray', 'black');
         }
 
         // ######################################

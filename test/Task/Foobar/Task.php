@@ -8,6 +8,11 @@
     {
         public function run()
         {
-            var_dump($this->getVo());
+            $this->writeError('Error');
+            $this->writeSuccess('Success');
+            $this->writeNote('Note');
+            $this->writeNormal('Normal');
+            $this->writeSubtle('Subtle');
+            $this->bell();
         }
     }
