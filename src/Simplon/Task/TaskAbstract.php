@@ -10,6 +10,7 @@
 
         /**
          * @param TaskVoInterface $taskVo
+         *
          * @return $this
          */
         public function setVo(TaskVoInterface $taskVo)
@@ -76,6 +77,26 @@
         /**
          * @param $text
          */
+        public function writeWarning($text)
+        {
+            $this->_writeLine($text, 'lightRed', 'black');
+        }
+
+        // ######################################
+
+        /**
+         * @param $text
+         */
+        public function writeHeadline($text)
+        {
+            $this->_writeLine($text, 'lightGreen', 'black');
+        }
+
+        // ######################################
+
+        /**
+         * @param $text
+         */
         public function writeNormal($text)
         {
             $this->_writeLine($text, 'white', 'black');
@@ -98,7 +119,7 @@
          */
         public function writeBlink($text)
         {
-            $this->_writeLine($text, 'lightGreen', 'blink');
+            $this->_writeLine($text, 'lightPurple', 'blink');
         }
 
         // ######################################
